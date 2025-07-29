@@ -1,83 +1,90 @@
-# July 2025 Cohort Hackathon 1: Portfolio Challenge 🚀  
+# 🚀 My Personal Portfolio – PLP Hackathon July 2025
 
-Welcome to the **PLP Academy Portfolio Challenge!** 🎉  
+Welcome to my official **portfolio website** built for the **PLP Academy July 2025 Hackathon Challenge**! This responsive and well-documented project showcases my skills, experience, interests, and projects as an aspiring full-stack web developer.
 
-This README.md file provides all the details you need to successfully complete and submit your project. Let’s get started! 💻  
+---
 
----  
+## 🧠 About Me
+Hi! I'm **The Code Explorer**, aka @daveozillahm – a hands-on learner, passionate about building smart, accessible, and functional digital solutions. My current journey blends MERN stack, Flutter/Dart, HTML5, and a drive to turn ideas into real-world tools.
 
-## 🌟 Project Overview  
-Your challenge is to build a **personal portfolio website** that showcases your skills, background, and achievements. Your portfolio should include:  
+---
 
-1. **Programming Languages**: List the programming languages you’re proficient in.  
-2. **About Section**: Share a brief introduction about yourself, your passion, and what drives you.  
-3. **Educational Background**: Provide details of your education and include a downloadable CV.  
-4. **Interests**: Share what excites you about tech and your professional interests.  
-5. **Projects**: Include links to your projects with brief descriptions.  
-6. **Contact Form**: Make it easy for collaborators or employers to reach you.  
+## 📌 Live Site
+👉 **[View Portfolio on GitHub Pages](https://ozillah2000.github.io/your-repo-name)**  
+(Replace `your-repo-name` with your actual GitHub repo name after deployment)
 
----  
+---
 
-## 🛠️ Guidelines  
+## 🛠️ Technologies Used
 
-- **Skills**: Build your portfolio using HTML and CSS.  
-- **Individual Work**: This is a solo challenge—showcase your skills and creativity.
-- **Deskie Team Up**: This is you and your Deskie working together, merging your skills and creativity to come up with something great.
-- **Reference Material**: For additional details and helpful information, refer to [this document](https://docs.google.com/document/d/1v-F-tXa1dwV2w5oMkM2QzAuoFoQYZlOEuT5qeRKDTPA/edit?usp=sharing).  
-- **Submission**: Push your project to a **public GitHub repository** and complete the submission form.  
+- HTML5, CSS3
+- Git & GitHub
+- Semantic Layout & Clean Form Structure
+- Responsive Design (Flexbox + Grid)
+- Native HTML5 Validation
 
----  
+---
 
-## 📅 Key Dates  
+## 🧩 Features
 
-**Start Date**: July 30th, 2025, 12:00 PM EAT
-**End Date**: Aug 3rd, 2025, 12:00 PM EAT
-**Award Ceremony**: Aug 8th, 2025, 5:00 PM EAT  
+- ✨ Hero section with custom branding
+- 🧠 Skills section in styled grid format
+- 🎓 Educational timeline with CV download button
+- 💼 Live links to real GitHub-hosted projects
+- 📬 Contact form with accessibility & required validation
+- 📱 Mobile-friendly layout using Flexbox/Grid
 
----  
+---
 
-## 💼 Example Portfolio Sections  
+## 💼 Projects Showcase
 
-### 📝 About Me  
-Hi! I’m [Your Name], a passionate web developer with a love for creating functional and beautiful web experiences.  
+1. [HTML5 Form Library](https://github.com/PLP-WebTechnologies/july-2025-introduction-to-html-5-Ozillah2000)
+2. [Magen Fuel Enterprise](https://github.com/Ozillah2000/magen_fuel_enterprise_pythonapp.git)
+3. [Fuel Flow Financials Hub](https://github.com/Ozillah2000/fuel-flow-financials-hub.git)
 
-### 🎓 Educational Background  
-I hold a degree in [Your Degree] from [Your University].  
-**[Download My CV](link-to-your-cv)**  
+---
 
-### 💡 Interests  
-- **Web Development**: Exploring modern frameworks and best practices.  
-- **Tech Innovations**: Keeping up with emerging trends in technology.  
+## 🏁 How to Run Locally
+You can view or test this project by:
 
-### 🛠️ Projects  
-1. **[Project 1](link-to-project1)**: A brief description of your project.  
-2. **[Project 2](link-to-project2)**: Another brief description.  
+1. Cloning the repo using GitHub Desktop
+2. Downloading the ZIP file directly from the repository
+3. Opening `index.html` in your browser
 
-### 📬 Contact Me  
-Feel free to reach out! [Contact Form](link-to-your-contact-form)  
+💡 No setup or installation required!
 
----  
+---
 
-## 📁 Submission Instructions  
+## 🌍 How to Deploy on GitHub Pages
+1. Push your project to a public GitHub repository
+2. Go to `Settings > Pages`
+3. Under "Source," select `main` branch and `/ (root)` folder
+4. Click **Save**
 
-1. **Create Your Portfolio**: Build a complete portfolio website with all the required sections.  
-2. **Push to GitHub**: Upload your project to a **public GitHub repository**.  
-3. **Update README**: Ensure your README.md includes details about your portfolio.  
-4. **Submit Your Project**: Use [this form](https://forms.gle/DVvnaM5AzkXPpxYSA) to share your GitHub repo.  
+🔗 GitHub will give you a live link like:  
+`https://Ozillah2000.github.io/your-repo-name`
 
----  
+✅ Boom — you’re live!
 
-## 🏆 Evaluation Criteria  
+---
 
-- **Creativity and Ingenuity (20%)**: Original ideas and standout features.  
-- **Code Quality (20%)**: Clean, readable, and efficient code.  
-- **Documentation (15%)**: Informative README and clear code comments.  
-- **Deployment (15%)**: Successfully hosted on a platform like GitHub Pages, Netlify or Vercel.  
-- **Development Process (15%)**: Effective collaboration and project management.  
-- **Technology Stack (15%)**: Usage of responsive, visually appealing tools.
+## 🏆 Hackathon Evaluation Alignment
+| Criteria                      | Achieved ✅         |
+|------------------------------|---------------------|
+| Creativity & Ingenuity       | ✅ Theming + voice   |
+| Code Quality                 | ✅ Clean HTML/CSS    |
+| Documentation                | ✅ This README       |
+| Deployment                   | ✅ GitHub Pages-ready|
+| Development Process          | ✅ Solo with guidance|
+| Tech Stack Usage             | ✅ HTML, CSS, GitHub |
 
+---
 
----  
+## 📫 Contact Me
+Email: daveozillahm@gmail.com  
+Twitter: [@DaveOchieng3](https://x.com/DaveOchieng3)  
+GitHub: [Ozillah2000](https://github.com/Ozillah2000)
 
-We’re excited to see your unique creations! ✨  
-Happy coding, and good luck! 🍀  
+---
+
+> Built with 💪 by David Ochieng – PLP Academy July 2025 Cohort
