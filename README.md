@@ -10,8 +10,7 @@ Hi! I'm **The Code Explorer**, aka @daveozillahm – a hands-on learner, passion
 ---
 
 ## 📌 Live Site
-👉 **[View Portfolio on GitHub Pages](https://ozillah2000.github.io/your-repo-name)**  
-(Replace `your-repo-name` with your actual GitHub repo name after deployment)
+👉 **[View Portfolio on GitHub Pages]()[*](https://github.com/Ozillah2000/Hackathonjuly2025.git)*  
 
 ---
 
@@ -20,7 +19,7 @@ Hi! I'm **The Code Explorer**, aka @daveozillahm – a hands-on learner, passion
 - HTML5, CSS3
 - Git & GitHub
 - Semantic Layout & Clean Form Structure
-- Responsive Design (Flexbox + Grid)
+- Responsive Design 
 - Native HTML5 Validation
 
 ---
@@ -64,8 +63,6 @@ You can view or test this project by:
 🔗 GitHub will give you a live link like:  
 `https://Ozillah2000.github.io/your-repo-name`
 
-✅ Boom — you’re live!
-
 ---
 
 ## 🏆 Hackathon Evaluation Alignment
@@ -83,8 +80,10 @@ You can view or test this project by:
 ## 📫 Contact Me
 Email: daveozillahm@gmail.com  
 Twitter: [@DaveOchieng3](https://x.com/DaveOchieng3)  
-GitHub: [Ozillah2000](https://github.com/Ozillah2000)
+GitHub: [Ozillah2000]
+phone: 0734068138
+((https://github.com/Ozillah2000)
 
 ---
 
-> Built with 💪 by David Ochieng – PLP Academy July 2025 Cohort
+> Design by David Ochieng – PLP Academy July 2025 Cohort
