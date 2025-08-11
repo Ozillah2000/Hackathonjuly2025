@@ -1,236 +1,128 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Creative portfolio of a passionate full-stack learner and hackathon warrior.">
-   <meta name="keywords" content="HTML5, CSS3, JavaScript, MERN, Flutter, Dart, Portfolio, Hackathon">
-  <meta name="author" content="Dave Ochieng Ozillah">
-  <title>PLP Hackathon | My Ultimate Portfolio</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #f0f4f8, #e2e8f0);
-      color: #1c1c1c;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-    header, nav, section, footer {
-      padding: 20px;
-      margin: 10px auto;
-      max-width: 960px;
-      background-color: #ffffffcc;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    header {
-      background-color: #0f172a;
-      color: #fff;
-      text-align: center;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      padding: 0;
-    }
-    nav a {
-      text-decoration: none;
-      color: #0f172a;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #2563eb;
-    }
-    h2 {
-      color: #2563eb;
-      border-bottom: 2px solid #2563eb;
-      padding-bottom: 5px;
-    }
-    .profile-pic {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 10px auto;
-      border: 3px solid #2563eb;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    form input, form textarea {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    form input[type="submit"] {
-      background-color: #2563eb;
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    form input[type="submit"]:hover {
-      background-color: #1d4ed8;
-    }
-    .download-btn {
-      display: inline-block;
-      padding: 10px 15px;
-      background-color: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-      transition: background-color 0.3s ease;
-    }
-    .download-btn:hover {
-      background-color: #1e40af;
-    }
-    footer {
-      text-align: center;
-      background-color: #e2e8f0;
-      padding: 20px;
-      font-size: 0.9rem;
-      border-radius: 0;
-    }
-    marquee {
-      background-color: #2563eb;
-      color: white;
-      padding: 10px;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-    /* Back to Top Button - Pure CSS */
-#backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #2563eb;
-  color: white;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  text-align: center;
-  line-height: 45px;
-  font-size: 24px;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  z-index: 999;
-}
-#backToTop:focus {
-  outline: 2px solid #94a3b8;
-}
-
-
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dave Ochieng Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
-<a id="top"></a>
 
+    <!-- Sidebar -->
+    <aside class="sidebar" data-aos="fade-right">
+        <div class="profile">
+            <img src="dave.jpg" alt="Profile Photo" />
+            <h2>Dave Ochieng</h2>
+            <p>Full-Stack Developer</p>
+        </div>
 
-  <!-- Marquee -->
-  <marquee behavior="scroll" direction="left">Aspiring Full-Stack Developer | Creative. Focused. Ready to Build | Ready to Learn </marquee>
+        <div class="marquee">
+            <span>🚀 MERN Stack | Flutter | REST APIs | UI/UX Enthusiast | Problem Solver 🚀</span>
+        </div>
 
-  <!-- HEADER SECTION -->
-  <header>
-    <h1>Dave Ochieng Ozillah Profile for The July 2025 Cohort Hackathon</h1>
-    <p>Transforming ideas into smart digital products | MERN • Flutter • HTML5 • JS • Dart</p>
-  </header>
+        <nav>
+            <a href="#about"><i class="fas fa-user"></i> About</a>
+            <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+            <a href="#projects"><i class="fas fa-briefcase"></i> Projects</a>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
 
-  <!-- NAVIGATION BAR -->
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#interests">Interests</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+        <a href="cv.pdf" class="cv-btn" download>Download CV</a>
 
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="dave.jpg" alt="My Profile Photo" class="profile-pic">
-    <p>I’m a hands-on learner with a passion for web technologies and real-world challenges. Whether it’s building or designing interactive forms in HTML5 or feature specialization modules like MERN Stack, AI, or Flutter/Dart, I strive to craft intuitive and clean web experiences. I’m also your go-to teammate in hackathons. I am ready to learn and tag along with my fellow July 2025 cohort to fruitify our coding adventures. PLP Academy, where coding dreams come to life! </p>
-  </section>
+        <div class="socials">
+            <a href="https://github.com/Ozillah2000" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/david-ochieng-4065a3127/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/DaveOchieng3" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </aside>
 
-  <!-- SKILLS SECTION -->
-  <section id="skills">
-    <h2>Tech Skills & Stack</h2>
-    <ul>
-      <li>HTML5 / CSS3 / JavaScript</li>
-      <li>Node.js / Express / MongoDB</li>
-      <li>Flutter / Dart</li>
-      <li>Postman / Swagger / Git</li>
-      <li>MongoDB / PostgreSQL / SQLite</li>
-    </ul>
-  </section>
+    <!-- Main Content -->
+    <main class="content">
 
-  <!-- EDUCATION SECTION -->
-  <section id="education">
-    <h2>Education</h2>
-    <p><strong>PLP Academy</strong> – Software Engineering July Cohort (2025)</p>
-    <p><strong>Wezesha Innovation Foundation</strong> – Android Development, Java and Python Programming (2023)</p>
-    <p><strong>Institute of Advanced Technology (IAT)</strong> – Data Science (2022)</p>
-    <p><strong>Kisumu National Polytechnic</strong> – Diploma in ICT (2016 – 2018)</p>
-    <p><strong>KCSE</strong> – 2007 – 2011, Grade: B–</p>
-    <p><strong>St. Koru Primary School</strong> – KCPE, Score: 313/500</p>
-    <a href="assets/David_Ochieng_CV.pdf" download class="download-btn">📄 Download My CV</a>
-  </section>
+        <!-- About -->
+        <section id="about" data-aos="fade-up">
+            <h1>Hi, I'm Dave 👋</h1>
+            <p>I’m a creative and technically proficient developer with expertise in web and mobile application development. I enjoy crafting clean, responsive, and user-friendly applications.</p>
+        </section>
 
-  <!-- INTERESTS SECTION -->
-  <section id="interests">
-    <h2>Tech Interests</h2>
-    <ul>
-      <li>Building web APIs and connecting frontends with smart backends</li>
-      <li>Designing forms and UIs that are accessible and intuitive</li>
-      <li>Exploring CSS tricks to enhance user experience</li>
-      <li>Participating in dev communities, hackathons & real-world builds</li>
-    </ul>
-  </section>
+        <!-- Skills -->
+        <section id="skills" data-aos="fade-up" data-aos-delay="100">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Flutter</span>
+            </div>
+        </section>
 
-  <!-- PROJECTS SECTION -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <ul>
-      <li><a href="https://github.com/PLP-WebTechnologies/july-2025-introduction-to-html-5-Ozillah2000.git">HTML5 Form</a> – A sleek collection of reusable forms built in HTML5 with validation and CSS.</li>
-      <li><a href="https://github.com/Ozillah2000/magen_fuel_enterprise_pythonapp.git">Magen Fuel Enterprise</a> – Inventory and sales management system powered by Python and Flask.</li>
-      <li><a href="https://github.com/Ozillah2000/simpleproject.git">Simple HTML Project</a> – A simple html project to spice my learning.</li>
-    </ul>
-  </section>
+        <!-- Projects -->
+        <section id="projects" data-aos="zoom-in" data-aos-delay="200">
+            <h2>Projects</h2>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="https://formsubmit.co/daveozillahm@gmail.com" method="POST">
-  <label for="name">Your Name</label>
-  <input type="text" id="name" name="name" required placeholder="Enter your name">
+            <div class="project-card" data-aos="fade-right">
+                <img src="project1.jpg" alt="Project One" />
+                <h3>Project One</h3>
+                <p>Responsive web app built with MERN stack, featuring authentication and CRUD operations.</p>
+                <div class="badges">
+                    <span>HTML</span><span>CSS</span><span>React</span>
+                </div>
+                <a href="#" class="btn">View Project</a>
+            </div>
 
-  <label for="email">Email Address</label>
-  <input type="email" id="email" name="email" required placeholder="Enter your email">
+            <div class="project-card" data-aos="fade-left">
+                <img src="project2.jpg" alt="Project Two" />
+                <h3>Project Two</h3>
+                <p>Flutter mobile app for e-commerce with integrated payment gateway and Firebase backend.</p>
+                <div class="badges">
+                    <span>Flutter</span><span>Dart</span><span>Firebase</span>
+                </div>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </section>
 
-  <label for="message">Your Message</label>
-  <textarea id="message" name="message" rows="4" required placeholder="Let's connect!"></textarea>
+        <!-- Contact -->
+        <section id="contact" data-aos="fade-up">
+            <h2>Contact</h2>
+            <form action="https://formspree.io/f/xovlybyg" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
 
-  <input type="submit" value="Send Message">
-</form>
-  </section>
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Dave Ochieng. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Ozillah2000" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/david-ochieng-4065a3127/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/DaveOchieng3" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </footer>
 
-  <!-- FOOTER -->
-  <footer>
-    <p><strong>Made with and powered by HTML Vanilla | Hackathon July 2025</strong></p>
-    <small><strong>Follow me on <a href="https://x.com/DaveOchieng3">Twitter</a> | <a href="https://github.com/Ozillah2000">GitHub</a></strong> | <a href="https://www.linkedin.com/in/david-ochieng-4065a3127/">LinkedIn</a></small>
-    <p><em>&copy; 2025 @daveozillahm. All rights reserved.</em></p>
-    <p>Last updated: July 2025</p>
-  </footer>
-  <a href="#top" id="backToTop" title="Back to top">⬆️</a>
+    </main>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true
+      });
+    </script>
 </body>
 </html>
