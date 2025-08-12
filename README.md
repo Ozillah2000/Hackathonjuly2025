@@ -10,6 +10,7 @@ Hi! I'm **The Code Explorer**, aka @daveozillahm – a hands-on learner, passion
 ---
 
 ## 📌 Live Site
+https://vercel.com/ozillah2000s-projects/hackathonjuly2025-lhlb
 👉 **[View Portfolio on GitHub Pages]()[*](https://github.com/Ozillah2000/Hackathonjuly2025.git)*  
 
 ---
