@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>David Ochieng — Professional Portfolio</title>
+  <meta name="description" content="Dark modern portfolio showcasing projects, skills, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f13;
+      --card:#0f1720;
+      --muted:#9aa4af;
+      --accent-1:#7c3aed; /* purple */
+      --accent-2:#06b6d4; /* teal */
+      --glass: rgba(255,255,255,0.04);
+      --radius:16px;
+      --gap:1.25rem;
+      --max-width:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.08), transparent),
+                  radial-gradient(800px 400px at 90% 80%, rgba(6,182,212,0.06), transparent),
+                  var(--bg);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:2rem 1rem;
+    }
+    .container{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:1fr;gap:var(--gap)}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.5rem 0}
+    .brand{display:flex;align-items:center;gap:0.9rem}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-family:Poppins}
+    nav{display:flex;gap:1rem;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:0.95rem}
+    nav a:hover{color:#fff}
+    .btn-ghost{padding:0.55rem 0.9rem;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);cursor:pointer;color:var(--muted)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:1.25rem 0}
+    .intro h1{font-family:Poppins;font-weight:700;font-size:2.25rem;margin:0 0 0.25rem}
+    .intro p.lead{margin:0 0 1rem;color:var(--muted);line-height:1.5}
+    .cta-row{display:flex;gap:0.75rem}
+    .btn-primary{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));padding:0.7rem 1.1rem;border-radius:12px;border:none;color:white;font-weight:700;cursor:pointer}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:0.6rem 1rem;border-radius:12px;color:var(--muted);cursor:pointer}
+
+    .profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1rem;border-radius:var(--radius);backdrop-filter: blur(6px);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .profile-card img{width:100%;border-radius:12px;object-fit:cover}
+    .roles{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.75rem}
+    .role-pill{background:var(--glass);padding:0.35rem 0.5rem;border-radius:999px;font-size:0.8rem;color:var(--muted)}
+
+    /* Sections */
+    section{padding:1rem 0;border-top:1px solid rgba(255,255,255,0.02)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    h2.section-title{margin:0 0 0.75rem;font-family:Poppins}
+    p.muted{color:var(--muted);margin:0}
+
+    /* Skills */
+    .skill{display:flex;align-items:center;justify-content:space-between;margin:0.6rem 0}
+    .skill-name{font-weight:600}
+    .bar{height:10px;background:rgba(255,255,255,0.04);border-radius:999px;overflow:hidden;margin-top:6px}
+    .bar > i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));transition:width 0.9s cubic-bezier(.2,.9,.2,1)}
+
+    /* Projects */
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .project-thumb{height:160px;border-radius:10px;overflow:hidden;background-size:cover;background-position:center}
+    .project-meta{display:flex;justify-content:space-between;align-items:center;margin-top:0.6rem}
+    .tags{display:flex;gap:0.4rem}
+    .tag{font-size:0.75rem;padding:0.25rem 0.45rem;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted)}
+
+    /* Timeline */
+    .timeline{position:relative;padding-left:1rem}
+    .timeline:before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--accent-1),var(--accent-2));opacity:0.9}
+    .event{position:relative;padding:0.7rem 0 0.7rem 1.4rem}
+    .event:before{content:'';position:absolute;left:-6px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:3px solid var(--accent-1)}
+
+    /* Contact */
+    form .row{display:flex;gap:0.75rem}
+    input,textarea{width:100%;padding:0.7rem;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    textarea{min-height:120px}
+    .muted-small{font-size:0.85rem;color:var(--muted)}
+
+    /* Footer */
+    footer{padding:1rem 0;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .projects-grid,.grid-3{grid-template-columns:repeat(2,1fr)}
+      .profile-card{order:-1}
+    }
+    @media (max-width:640px){
+      .projects-grid,.grid-3{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    /* Micro interactions */
+    .card:hover{transform:translateY(-6px);transition:transform 0.35s cubic-bezier(.2,.9,.2,1)}
+    a.social{opacity:0.9;text-decoration:none}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">DM</div>
+        <div>
+          <div style="font-weight:700;font-size: 1.5rem">David Ochieng Ozillah M.</div>
+          <div style="font-size:1.0rem;color:var(--muted);text-align: justify">I am  a dedicated, growth-oriented software developer <br />with a strong commitment to mastering full-stack <br />development and web-design.</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button class="btn-ghost" id="theme-toggle">Toggle</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="intro">
+          <h1>Hi, I’m <span style="background:linear-gradient(90deg,var(--accent-1),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent;">David Ochieng M.</span></h1>
+          <p class="lead" style="text-align: justify">I am a dedicated, growth-oriented software developer, focused on creating accessible web experiences and robust backend services, blending creativity with technical precision. With expertise in MERN, Dart, and Flutter, I endeavor to transform ideas into scalable, user-focused solutions that are both functional and enjoyable to use. With a strong commitment to continuous learning and improvement, I am always seeking new challenges and opportunities to expand my skill set. also i have basic knowledge of Data analysis with SPSS and STATA.</p>
+          <div class="cta-row">
+            <button class="btn-primary" onclick="scrollToSection('projects')">View Projects</button>
+            <a class="btn-outline" href="#contact" style="background:var(--accent-2);color:var(--bg)">Hire Me</a>
+          </div>
+
+          <div style="margin-top:1.1rem;display:flex;gap:0.6rem;align-items:center">
+            <div class="muted-small">Top technologies:</div>
+            <div class="roles" style="">
+              <div class="role-pill" style="color: var(--accent-1)">React</div>
+              <div class="role-pill" style="color: var(--accent-1)">Node.js</div>
+              <div class="role-pill" style="color: var(--accent-1)">PostgreSQL</div>
+              <div class="role-pill" style="color: var(--accent-1)">MongoDB</div>
+              <div class="role-pill" style="color: var(--accent-1)">Express.js</div>
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="profile-card">
+          <img src="dave.jpg" alt="profile">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:0.8rem">
+            <div>
+              <div style="font-weight:700">David Ochieng Ozillah M.</div>
+              <div style="font-size:0.85rem;color:var(--muted);font-style: italic; text-decoration: underline">Senior ICT Assistant</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-weight:700;color: pink">Nairobi, Kenya</div>
+              <div style="font-size:0.85rem;color:var(--muted);color: pink">Open to opportunities</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects">
+        <h2 class="section-title">Projects accomplished</h2>
+        <p class="muted">Selected works — production-ready, polished UI and clean engineering.</p>
+
+        <div class="projects-grid" style="margin-top:1rem">
+          <article class="card">
+            <div class="project-thumb" style="background-image:url('dashboard.png')"></div>
+            <h3 style="margin:0.6rem 0 0">POS- Magen Fuel-Tracker</h3>
+            <p class="muted">Developed with Python, Flask, and PostgreSQL</p>
+            <div class="project-meta">
+              <div class="tags"><span class="tag">Dashboard</span><span class="tag">Auth</span></div>
+              <div><a class="muted-small" href="https://github.com/Ozillah2000/magen_fuel_enterprise_pythonapp.git" target="_blank">Live</a> 
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="project-thumb" style="background-image:url('loginpage.jpg')"></div>
+            <h3 style="margin:0.6rem 0 0">Magen Mobile App</h3>
+            <p class="muted">Dart · Flutter · Firebase</p>
+            <div class="project-meta">
+              <br /><br />
+              <div><a class="muted-small"  <a class="muted-small" href="https://magenapp-939b9.web.app/" target="_blank">Live</a> 
+            </div>
+          </article>
+
+
+          <article class="card">
+            <div class="project-thumb" style="background-image:url('fuelflow.jpg')"></div>
+            <h3 style="margin:0.6rem 0 0">Fuel flow Tracker</h3>
+            <p class="muted">Node.js · React · Express · Tailwind · Vite</p>
+            <div class="project-meta"> <br /> <br />
+
+              <div><a class="muted-small" href="https://fuel-flow-financials-hub.lovable.app/" target="_blank">Live</a></div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <p class="muted">Strong focus on full-stack development, testing, and clean architecture.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 320px;gap:1rem;margin-top:1rem">
+          <div class="card">
+            <div class="skill">
+              <div>
+                <div class="skill-name">JavaScript / TypeScript</div>
+                <div class="bar"><i style="width:92%"></i></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div>
+                <div class="skill-name">React / Frontend</div>
+                <div class="bar"><i style="width:88%"></i></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div>
+                <div class="skill-name">Node.js / Backend</div>
+                <div class="bar"><i style="width:86%"></i></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div>
+                <div class="skill-name">Databases</div>
+                <div class="muted-small">Postgres · Mongo · Redis</div>
+                <div class="bar"><i style="width:80%"></i></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div>
+                <div class="skill-name">DevOps</div>
+                <div class="muted-small">CI/CD, Docker, Cloud</div>
+                <div class="bar"><i style="width:70%"></i></div>
+              </div>
+            </div>
+
+          </div>
+
+          <aside class="card">
+            <h3 style="margin-top:0">Core strengths</h3>
+            <ul style="margin:0;padding-left:1.1rem;color:var(--muted)">
+              <li>Product thinking & user empathy</li>
+              <li>Clean, testable code</li>
+              <li>Mentoring & cross-team communication</li>
+              <li>Performance and observability</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2 class="section-title">Experience & Education</h2>
+        <p class="muted">A timeline of roles and milestones.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem">
+          <div class="card">
+            <div class="timeline">
+              <div class="event">
+                <div style="font-weight:700">Lead developer — Magen Fuel Enterprise</div>
+                <div class="muted-small">Jan 2025 — Present</div>
+                <p class="muted">Built payment integration and redesigned the sales recording system to improve reliability and reporting. (See README for architecture notes.)<a href="#" target="_blank">README</a></p>
+              </div>
+
+              <div class="event">
+                <div style="font-weight:700">Developer</div>
+                <div class="muted-small">Jul 2025 - </div>
+                <p class="muted">Magen Mobile App.</p>
+              </div>
+
+              <div class="event">
+                <div style="font-weight:700">B.Sc Computer Science — KCA-University</div>
+                <div class="muted-small">2014</div>
+                <p class="muted">Graduated with honours. Relevant coursework: Algorithms, Databases</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-top:0">Testimonials</h3>
+            <blockquote style="margin:0;color:var(--muted)">"Delivered exceptional quality and always went the extra mile." </blockquote>
+            <div style="margin-top:0.8rem;color:var(--muted)">More testimonials available on request.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p class="muted">Ready For Hire? Send a note — I reply within 48 hours.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 360px;gap:1rem;margin-top:1rem">
+          <form id="contactForm" class="card" onsubmit="handleSubmit(event)" action="https://formspree.io/f/xovlybyg" method="POST">
+            <div style="display:grid;gap:0.75rem">
+              <div class="row">
+                <input type="text" id="name" placeholder="Your name" required />
+                <input type="email" id="email" placeholder="Email" required />
+              </div>
+              <input type="text" id="subject" placeholder="Subject" required />
+              <textarea id="message" placeholder="Message" required></textarea>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div class="muted-small">Prefer email? <a href="mailto:daveozillahm@gmail.com">daveozillahm@gmail.com</a></div>
+                <button class="btn-primary" type="submit">Send message</button>
+              </div>
+              <div id="formMsg" class="muted-small" style="display:none;margin-top:0.6rem"></div>
+            </div>
+          </form>
+
+          <aside class="card">
+            <h3 style="margin-top:0">Let's connect</h3>
+            <p class="muted-small">I’m active on the platforms below. Feel free to reach out for collaborations, mentorship, or contract work.</p>
+            <div style="display:flex;gap:0.6rem;margin-top:0.8rem">
+              <a class="social" href="https://github.com/Ozillah2000/"  target="_blank" aria-label="github"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.93 3.19 9.1 7.62 10.57.56.1.76-.24.76-.53 0-.26-.01-1.12-.02-2.03-3.1.67-3.76-1.5-3.76-1.5-.51-1.32-1.25-1.67-1.25-1.67-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.01 1.73 2.65 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.47-.28-5.07-1.23-5.07-5.48 0-1.21.43-2.2 1.14-2.98-.12-.28-.5-1.4.11-2.93 0 0 .93-.3 3.05 1.14a10.58 10.58 0 0 1 2.78-.37c.94 0 1.89.13 2.78.37 2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.65.11 2.93.71.78 1.14 1.77 1.14 2.98 0 4.26-2.61 5.19-5.09 5.47.4.35.75 1.05.75 2.12 0 1.53-.01 2.77-.01 3.15 0 .29.2.64.77.53C19.06 20.85 22.25 16.68 22.25 11.75 22.25 5.48 17.27.5 12 .5z" fill="currentColor"/></svg></a>
+              <a class="social" href="https://www.linkedin.com/in/david-ochieng-4065a3127/" target="_blank" aria-label="linkedin"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.6v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85v5.5h-3.6V9h3.46v1.56h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.29 2.39 4.29 5.49v6.8zM5.34 7.43c-1.16 0-2.1-.95-2.1-2.12 0-1.17.94-2.12 2.1-2.12 1.16 0 2.1.95 2.1 2.12 0 1.17-.94 2.12-2.1 2.12zM7.14 20.45H3.54V9h3.6v11.45z" fill="currentColor"/></svg></a>
+              <a class="social" href="https://x.com/DaveOchieng3" target="_blank" aria-label="twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 6c-.77.35-1.6.58-2.46.68.89-.53 1.57-1.37 1.89-2.37-.83.5-1.75.86-2.72 1.06A4.15 4.15 0 0 0 12.1 9.1c0 .33.03.66.11.97-3.45-.17-6.51-1.83-8.56-4.34-.36.6-.56 1.3-.56 2.05 0 1.42.72 2.67 1.82 3.4-.67-.02-1.3-.2-1.85-.5v.05c0 1.98 1.4 3.63 3.27 4.01-.34.09-.7.14-1.07.14-.26 0-.52-.02-.77-.07.52 1.63 2.03 2.81 3.82 2.84A8.33 8.33 0 0 1 2 19.54 11.75 11.75 0 0 0 8.29 21c7.55 0 11.68-6.25 11.68-11.66v-.53c.8-.58 1.5-1.32 2.06-2.15-.74.33-1.53.56-2.36.66z" fill="currentColor"/></svg></a>
+            </div>
+
+            <div style="margin-top:1rem;color:var(--muted)">
+              <strong>Available for:</strong>
+              <div>Full-time · Contract · Mentorship</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Your Name — Built with care · Designed for impact</div>
+    </footer>
+  </div>
+
+  <script>
+    // small utilities
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function scrollToSection(id){
+      document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});
+    }
+
+    // contact form (client-only demo)
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const formMsg = document.getElementById('formMsg');
+
+      // minimal validation
+      if(!name||!email||!subject||!message){
+        formMsg.style.display='block';formMsg.textContent='Please fill out all fields.';return;
+      }
+
+      // fake send: create downloadable .txt with the message (useful for demo without backend)
+      const payload = `From: ${name} <${email}>\nSubject: ${subject}\n\n${message}`;
+      const blob = new Blob([payload], {type: 'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = `${name.replace(/\s+/g,'_')}_message.txt`;
+      a.click();
+      URL.revokeObjectURL(url);
+
+      formMsg.style.display='block';formMsg.textContent='Message packaged for demo. In a real site this would be sent to your inbox.';
+      e.target.reset();
+    }
+
+    // theme toggle: subtle inversion for demo
+    const themeBtn = document.getElementById('theme-toggle');
+    let dark = true;
+    themeBtn.addEventListener('click', ()=>{
+      dark = !dark;
+      if(!dark){
+        document.documentElement.style.setProperty('--bg','#f7f9fb');
+        document.documentElement.style.setProperty('--card','#ffffff');
+        document.documentElement.style.setProperty('--muted','#4b5563');
+        document.documentElement.style.setProperty('--glass','rgba(0,0,0,0.04)');
+        document.documentElement.style.setProperty('color','#081224');
+      } else {
+        document.documentElement.style.setProperty('--bg','#0b0f13');
+        document.documentElement.style.setProperty('--card','#0f1720');
+        document.documentElement.style.setProperty('--muted','#9aa4af');
+        document.documentElement.style.setProperty('--glass','rgba(255,255,255,0.04)');
+        document.documentElement.style.setProperty('color','#e6eef6');
+      }
+    });
+
+  </script>
+</body>
+</html>
